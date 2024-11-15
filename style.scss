@@ -12,19 +12,91 @@ body {
 
 nav {
   width: 100%;
+  // position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  #top {
+    padding: 2vh 0;
+    background: linear-gradient(to left, #813ff2, #036cdb);
+    display: flex;
+    justify-content: center;
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      color: white;
+      font-size: 0.9em;
+      img {
+        width: 0.8em;
+      }
+    }
+  }
+
+  #navbar {
+    display: flex;
+    padding: 3vh 3vw;
+    justify-content: space-between;
+    background-color: white;
+    top: 0;
+
+    #left {
+      img {
+        width: 8em;
+      }
+    }
+
+    #right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4em;
+
+      #links {
+        display: flex;
+        justify-content: space-between;
+        gap: 3em;
+        font-size: 1em;
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+          opacity: 0.8;
+        }
+      }
+
+      button {
+        border-radius: 2em;
+        border: 0.15em solid royalblue;
+        padding: 0.7vh 2vw;
+        font-size: 1em;
+        color: royalblue;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        background-color: transparent;
+      }
+      button:hover {
+        background-color: royalblue;
+        color: white;
+      }
+    }
+  }
 }
 
 main {
   width: 100%;
 
   #section1 {
-    background: linear-gradient(to left, #ffffff, #ffccff);
+    background: linear-gradient(45deg, #fcdee9, #f3fcff);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3rem;
     padding: 5vh 21vw;
+    padding-top: 20vh;
 
     #top {
       display: flex;
@@ -40,7 +112,8 @@ main {
 
         h1 {
           font-size: 4.5em;
-          color: #444;
+          color: #000000;
+          font-weight: 600;
           line-height: 1em;
         }
       }
@@ -59,10 +132,10 @@ main {
       justify-content: center;
       text-align: center;
       p {
-        width: 70%;
+        width: 80%;
         font-size: 2em;
         color: black;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
   }
@@ -185,7 +258,7 @@ main {
 
     #feature {
       background: linear-gradient(to left, #ffffff, #fcfce2);
-      padding: 0 20vw;
+      padding: 7vh 20vw;
       display: flex;
       flex-direction: row-reverse;
 
@@ -242,7 +315,7 @@ main {
 
     #featureEvent {
       display: flex;
-      padding: 0 20vw;
+      padding: 5vh 20vw;
       align-items: center;
 
       #text {
@@ -409,10 +482,9 @@ main {
             display: flex;
             gap: 0.5em;
             align-items: center;
-              img{
-                width: 1em;
-                color: white;
-              }
+            img {
+              width: 1em;
+            }
           }
         }
       }
